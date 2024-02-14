@@ -1,0 +1,27 @@
+[
+    {
+      "nombre": "Cheese roll",
+      "precio": 2000
+    },
+    {
+      "nombre": "Kaori Cupcake. 3 Unidades",
+      "precio": 2200
+    },
+    {
+        "nombre": "Kasutera.",
+        "precio": 3000
+      },
+      {
+        "nombre": "Kurimanju. 6 Unidades",
+        "precio": 1800
+      },
+      {
+        "nombre": "Dorayaki. 6 Unidades",
+        "precio": 2700
+      },
+      {
+        "nombre": "Manju. 6 Unidades",
+        "precio": 1900
+      }
+     
+  ]

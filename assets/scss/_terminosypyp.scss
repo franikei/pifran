@@ -1,0 +1,65 @@
+$color-principal: rgb(255, 221, 248);
+$principal-oscuro: rgb(206, 126, 190);
+$titulo: 2rem;
+$texto-chico: 1.3rem;
+$max: 100%;
+$mobile-breakpoint: 767px;
+
+.terminos-container {
+    background-color:$color-principal;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 60px;
+  
+    .box-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+  
+      .seccion {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+  
+        h3 {
+          font-size: 1.5rem;
+          margin: 10px 0;
+        }
+  
+        p {
+          font-size: 1rem;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+
+  .pyp-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    h2 {
+      font-size: 20px;
+      margin-top: 15px;
+    }
+    
+    p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    
+  }
+  

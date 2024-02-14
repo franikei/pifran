@@ -1,0 +1,91 @@
+@use 'redes';
+@use 'productos';
+@use 'combos';
+@use 'nosotros';
+@use 'terminosypyp';
+$color-principal: rgb(255, 221, 248);
+$principal-oscuro: rgb(206, 126, 190);
+$titulo: 2rem;
+$texto-chico: 1.3rem;
+$max: 100%;
+$mobile-breakpoint: 767px;
+
+body{
+    background-color: $color-principal !important;
+}
+
+.carousel-inner{
+    padding-bottom: 3%;
+}
+
+.featurette-divider {
+    border-top: 1px solid #ccc;
+    margin: 2rem 0;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .featurette {
+    h2 {
+      font-size: $titulo; 
+    }
+
+    p {
+      font-size: $texto-chico; 
+    }
+  
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    @media (max-width: $mobile-breakpoint) { 
+        grid-template-columns: 1fr;
+      h2 {
+        font-size: $texto-chico; 
+  
+      p {
+        font-size: 0.875rem;
+      }
+  
+      img {
+        max-width: $max;
+        height: auto;
+      }
+    }
+  }
+  }
+
+  
+
+@keyframes growImage {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1); 
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.animate-grow {
+    transition: transform 0.3s ease-in-out;
+}
+
+.animate-grow:hover {
+    animation: growImage 0.3s forwards;
+}
+
+
+  img {
+    max-width: $max; 
+    height: auto;    
+  }
+
+  footer{
+    margin-top: 2%;
+  }
+

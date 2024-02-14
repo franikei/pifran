@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invitación de San Valentín</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ff1212; /* Cambia este color al que desees */
+    }
+    #modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+    }
+    #modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        text-align: center;
+    }
+    #no-button {
+        opacity: 0.5;
+        cursor: not-allowed;
+        position: absolute;
+    }
+</style>
+</head>
+<body>
+
+<div id="modal">
+    <div id="modal-content">
+        <h2>¿Querés ser mi San Valentín?</h2>
+        <button id="yes-button">Sí</button>
+        <button id="no-button" disabled>No</button>
+    </div>
+</div>
+
+<script>
+    var modal = document.getElementById("modal");
+    var yesButton = document.getElementById("yes-button");
+    var noButton = document.getElementById("no-button");
+
+    noButton.addEventListener("mouseenter", function() {
+        // Obtener el ancho y alto de la ventana del navegador
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+        // Generar una posición aleatoria para el botón "No"
+        var randomX = Math.floor(Math.random() * (windowWidth - 100)); // Restar 100 para evitar que el botón se salga de la pantalla
+        var randomY = Math.floor(Math.random() * (windowHeight - 50)); // Restar 50 para evitar que el botón se salga de la pantalla
+        // Aplicar la posición aleatoria al botón "No"
+        noButton.style.left = randomX + "px";
+        noButton.style.top = randomY + "px";
+    });
+
+    yesButton.addEventListener("click", function() {
+        // Redirigir a otra página al hacer clic en "Sí"
+        window.location.href = "Nosotros.html";
+    });
+
+    noButton.addEventListener("click", function() {
+        alert("TE AMO");
+        modal.style.display = "none";
+    });
+
+    // Mostrar modal al cargar la página
+    window.onload = function() {
+        modal.style.display = "block";
+    };
+</script>
+
+</body>
+</html>

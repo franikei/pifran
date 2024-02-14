@@ -1,0 +1,73 @@
+$color-principal: rgb(255, 221, 248);
+$principal-oscuro: rgb(206, 126, 190);
+$titulo: 2rem;
+$texto-chico: 1.3rem;
+$max: 100%;
+$mobile-breakpoint: 767px;
+
+.combos {
+    background-color: $color-principal;
+    padding: 40px 0;
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      margin-top: 10px;
+    }
+  
+    .row {
+      display: flex;
+      justify-content: space-between;
+  
+      .col-md-6,
+      .col-lg-4 {
+        flex-basis: calc(50% - 20px);
+        margin-bottom: 20px;
+  
+        @media (max-width: $mobile-breakpoint) {
+          flex-basis: 100%;
+        }
+  
+        .combo {
+          border: 1px solid #ddd;
+          padding: 20px;
+          background-color: #fff;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+          transition: transform 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.05); 
+          }
+          img {
+            max-width: 100%;
+            max-height: 400px; 
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+          }
+  
+          h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+          }
+  
+          p {
+            margin-bottom: 15px;
+          }
+  
+          .agregar-carrito {
+            background-color: $color-principal;
+            border: none;
+            color: #000000;
+            padding: 8px 15px;
+            cursor: pointer;
+  
+            &:hover {
+              background-color: $principal-oscuro;
+            }
+          }
+        }
+      }
+    }
+  }

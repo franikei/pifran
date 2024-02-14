@@ -1,0 +1,26 @@
+$icono-estilos: (
+    "twitter": #1DA1F2,
+    "facebook": #1877F2,
+    "instagram": #E4405F
+  );
+  
+  .redes {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  
+    i {
+      font-size: 24px;
+      margin-left: 10px;
+      
+      @each $icon, $color in $icono-estilos {
+        &.fa-#{$icon} {
+          color: $color;
+  
+          &:hover {
+            color: darken($color, 15%);
+          }
+        }
+      }
+    }
+  }
